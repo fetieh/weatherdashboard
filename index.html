@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #001f3f; /* Dark Blue */
+            color: #fff; /* White */
+            padding: 10px;
+            text-align: center;
+        }
+
+        #search-container {
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        #city-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #city-input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        #weather-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #city-history {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #city-history li {
+            margin-bottom: 5px;
+        }
+
+        #current-city {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #forecast-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .day-forecast {
+            flex-basis: calc(20% - 10px);
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div id="search-container">
+        <form id="city-form">
+            <input type="text" id="city-input" placeholder="Enter city name" required>
+            <button type="submit">Search</button>
+        </form>
+        <ul id="city-history"></ul>
+    </div>
+    <div id="weather-container">
+        <div id="current-city"></div>
+        <div id="forecast-container" class="flex-container">
+            <!-- Display current and future weather information here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
